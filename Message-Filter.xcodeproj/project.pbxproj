@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E10E6217D84D9D0BF7DA361B /* Pods_Message_Filter_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5E5B151979D5305385694A /* Pods_Message_Filter_Extension.framework */; };
+		E52D44E5207233BD000ACF59 /* FilterRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D44E4207233BD000ACF59 /* FilterRule.swift */; };
+		E52D44E72072390D000ACF59 /* QueryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D44E62072390D000ACF59 /* QueryRequest.swift */; };
 		E578DA3E2068A22B00669A92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E578DA3D2068A22B00669A92 /* AppDelegate.swift */; };
 		E578DA402068A22B00669A92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E578DA3F2068A22B00669A92 /* ViewController.swift */; };
 		E578DA432068A22B00669A92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E578DA412068A22B00669A92 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		9C8B50C6CA877920A09FC637 /* Pods-Message-Filter_Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Message-Filter_Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Message-Filter_Extension/Pods-Message-Filter_Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		AB5E5B151979D5305385694A /* Pods_Message_Filter_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Message_Filter_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0978D58C9431E27775E183 /* Pods_Message_Filter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Message_Filter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E52D44E4207233BD000ACF59 /* FilterRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRule.swift; sourceTree = "<group>"; };
+		E52D44E62072390D000ACF59 /* QueryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryRequest.swift; sourceTree = "<group>"; };
 		E578DA3A2068A22B00669A92 /* Message-Filter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Message-Filter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E578DA3D2068A22B00669A92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E578DA3F2068A22B00669A92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				E578DA442068A22B00669A92 /* Assets.xcassets */,
 				E578DA462068A22B00669A92 /* LaunchScreen.storyboard */,
 				E578DA492068A22B00669A92 /* Info.plist */,
+				E52D44E4207233BD000ACF59 /* FilterRule.swift */,
+				E52D44E62072390D000ACF59 /* QueryRequest.swift */,
 			);
 			path = "Message-Filter";
 			sourceTree = "<group>";
@@ -343,7 +349,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E52D44E72072390D000ACF59 /* QueryRequest.swift in Sources */,
 				E578DA402068A22B00669A92 /* ViewController.swift in Sources */,
+				E52D44E5207233BD000ACF59 /* FilterRule.swift in Sources */,
 				E578DA3E2068A22B00669A92 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
