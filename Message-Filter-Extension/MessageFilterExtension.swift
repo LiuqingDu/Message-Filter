@@ -47,7 +47,7 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
         let messageBody = queryRequest.messageBody
         print(messageBody!)
         let regex = try? NSRegularExpression(pattern: "验证", options: .caseInsensitive)
-        let result = regex!.numberOfMatches(in: messageBody!, options: .reportCompletion, range: NSRange(location: 0, length: messageBody!.count-1))
+        let result = regex!.numberOfMatches(in: messageBody!, options: .reportCompletion, range: NSRange(location: 0, length: messageBody!.count))
         print(result)
         if (result != 0){
             return .filter

@@ -17,6 +17,7 @@
 		E578DA482068A22B00669A92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E578DA462068A22B00669A92 /* LaunchScreen.storyboard */; };
 		E578DA562068A26B00669A92 /* MessageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E578DA552068A26B00669A92 /* MessageFilterExtension.swift */; };
 		E578DA5A2068A26B00669A92 /* Message-Filter_Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E578DA532068A26B00669A92 /* Message-Filter_Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E5EC50EE2073875700E223F5 /* FilterRuleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EC50ED2073875700E223F5 /* FilterRuleGroup.swift */; };
 		EF3CC4CB4C1DA1D84E1B2FC9 /* Pods_Message_Filter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0978D58C9431E27775E183 /* Pods_Message_Filter.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		E578DA532068A26B00669A92 /* Message-Filter_Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Message-Filter_Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E578DA552068A26B00669A92 /* MessageFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterExtension.swift; sourceTree = "<group>"; };
 		E578DA572068A26B00669A92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5EC50ED2073875700E223F5 /* FilterRuleGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRuleGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,14 +121,13 @@
 		E578DA3C2068A22B00669A92 /* Message-Filter */ = {
 			isa = PBXGroup;
 			children = (
-				E578DA3D2068A22B00669A92 /* AppDelegate.swift */,
-				E578DA3F2068A22B00669A92 /* ViewController.swift */,
+				E5EC50EB207371AB00E223F5 /* AppDelegate */,
+				E5EC50EC207371B400E223F5 /* ViewController */,
+				E5EC50EA2073719A00E223F5 /* Rule */,
 				E578DA412068A22B00669A92 /* Main.storyboard */,
 				E578DA442068A22B00669A92 /* Assets.xcassets */,
 				E578DA462068A22B00669A92 /* LaunchScreen.storyboard */,
 				E578DA492068A22B00669A92 /* Info.plist */,
-				E52D44E4207233BD000ACF59 /* FilterRule.swift */,
-				E52D44E62072390D000ACF59 /* QueryRequest.swift */,
 			);
 			path = "Message-Filter";
 			sourceTree = "<group>";
@@ -138,6 +139,32 @@
 				E578DA572068A26B00669A92 /* Info.plist */,
 			);
 			path = "Message-Filter-Extension";
+			sourceTree = "<group>";
+		};
+		E5EC50EA2073719A00E223F5 /* Rule */ = {
+			isa = PBXGroup;
+			children = (
+				E52D44E4207233BD000ACF59 /* FilterRule.swift */,
+				E52D44E62072390D000ACF59 /* QueryRequest.swift */,
+				E5EC50ED2073875700E223F5 /* FilterRuleGroup.swift */,
+			);
+			path = Rule;
+			sourceTree = "<group>";
+		};
+		E5EC50EB207371AB00E223F5 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				E578DA3D2068A22B00669A92 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		E5EC50EC207371B400E223F5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E578DA3F2068A22B00669A92 /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		F5BCA799D3DE2DD8666D235B /* Frameworks */ = {
@@ -351,6 +378,7 @@
 			files = (
 				E52D44E72072390D000ACF59 /* QueryRequest.swift in Sources */,
 				E578DA402068A22B00669A92 /* ViewController.swift in Sources */,
+				E5EC50EE2073875700E223F5 /* FilterRuleGroup.swift in Sources */,
 				E52D44E5207233BD000ACF59 /* FilterRule.swift in Sources */,
 				E578DA3E2068A22B00669A92 /* AppDelegate.swift in Sources */,
 			);
