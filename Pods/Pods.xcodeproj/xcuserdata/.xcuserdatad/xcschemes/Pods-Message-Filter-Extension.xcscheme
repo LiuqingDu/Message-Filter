@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4EE95E8FBF33B59001F374F0D54CF603'
-               BlueprintName = 'Pods-Message-Filter'
+               BlueprintIdentifier = 'DEC8E2240C71FEFF48FEF88B4E862669'
+               BlueprintName = 'Pods-Message-Filter-Extension'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-Message-Filter.framework'>
+               BuildableName = 'Pods-Message-Filter-Extension.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

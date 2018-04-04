@@ -44,19 +44,18 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
     }
     
     private func offlineAction(for queryRequest: ILMessageFilterQueryRequest) -> ILMessageFilterAction {
-        let messageBody = queryRequest.messageBody
-        print(messageBody!)
-        let regex = try? NSRegularExpression(pattern: "验证", options: .caseInsensitive)
-        let result = regex!.numberOfMatches(in: messageBody!, options: .reportCompletion, range: NSRange(location: 0, length: messageBody!.count))
-        print(result)
-        if (result != 0){
-            return .filter
-        } else {
-            return .none
+        
+        let userDefaults = UserDefaults(suiteName: MessageFilterAppGroupName)
+        let ruleString: String? = userDefaults?.object(forKey: MessageFilterExtensionRuleKey) as? String
+        if (ruleString == nil) {
+            return .allow
         }
         
+        //TODO: - 转换 ruleString 到对象
+        
+        
         // Replace with logic to perform offline check whether to filter first (if possible).
-//        return .none
+        return .none
     }
     
     private func action(for networkResponse: ILNetworkResponse) -> ILMessageFilterAction {

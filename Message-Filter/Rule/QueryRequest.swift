@@ -13,8 +13,8 @@ import IdentityLookup
 /// 从系统的 ILMessageFilterQueryRequest 简化而来的类，包含发送者和信息内容
 
 class QueryRequest: NSObject {
-    var sender: String = ""
-    var messageBody: String = ""
+    public var sender: String = ""
+    public var messageBody: String = ""
     
     override init() {
         super.init()
@@ -25,8 +25,8 @@ class QueryRequest: NSObject {
     /// - Parameter request: ILMessageFilterQueryRequest 对象
     init(withSystemQueryRequest request: ILMessageFilterQueryRequest){
         super.init()
-        self.sender = request.sender
-        self.messageBody = request.messageBody
+        self.sender = request.sender!
+        self.messageBody = request.messageBody!
     }
     
     /// 初始化方法，通过设置 sender 和 messageBody 来创建

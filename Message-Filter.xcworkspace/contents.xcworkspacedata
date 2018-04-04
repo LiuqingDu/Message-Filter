@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Message-Filter-Framework/Message-Filter-Framework.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Message-Filter.xcodeproj">
    </FileRef>
    <FileRef

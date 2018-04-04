@@ -30,15 +30,15 @@ enum FilterRuleType: Int {
 /// 过滤规则
 class FilterRule: NSObject {
     
-    private var ruleTarget: FilterRuleTarget = .FilterRuleTargetContent
-    private var ruleType  : FilterRuleType = .FilterRuleTypeContains
-    private var keyword   : String = ""
+    public var ruleTarget: FilterRuleTarget = .FilterRuleTargetContent
+    public var ruleType  : FilterRuleType = .FilterRuleTypeContains
+    public var keyword   : String = ""
     
     override init() {
         super.init()
     }
     
-    init(withRuleTarget _ruleTarget: String, ruleType _ruleType: String, keyword _keyword: String){
+    init(withRuleTarget _ruleTarget: FilterRuleTarget, ruleType _ruleType: FilterRuleType, keyword _keyword: String){
         self.ruleType = _ruleType
         self.ruleTarget = _ruleTarget
         self.keyword = _keyword
@@ -47,7 +47,7 @@ class FilterRule: NSObject {
     /// 判断输入的 QueryRequest 是否符合过滤条件
     ///
     /// - Parameter request: 待检查的 QueryRequest
-    /// - Returns: 是否符合条件
+    /// - Returns: 是否符合条件。匹配上返回trle，没匹配上返回false。
     public func isMachedForRequest(request: QueryRequest) -> Bool {
         // 检测的对象。可以是：1，发送人；2，发送内容
         // 根据过滤条件设置的检测对象来获取相应的待检测内容

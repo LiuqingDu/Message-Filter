@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E10E6217D84D9D0BF7DA361B /* Pods_Message_Filter_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5E5B151979D5305385694A /* Pods_Message_Filter_Extension.framework */; };
+		1C51B2A6552060D9D1486C52 /* Pods_Message_Filter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B0AE33FD8A187AED1C631E /* Pods_Message_Filter.framework */; };
+		86E120F6B00AC77604AD1B0D /* Pods_Message_Filter_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612B9974721876FF56C68792 /* Pods_Message_Filter_Extension.framework */; };
 		E52D44E5207233BD000ACF59 /* FilterRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D44E4207233BD000ACF59 /* FilterRule.swift */; };
 		E52D44E72072390D000ACF59 /* QueryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D44E62072390D000ACF59 /* QueryRequest.swift */; };
 		E578DA3E2068A22B00669A92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E578DA3D2068A22B00669A92 /* AppDelegate.swift */; };
@@ -16,9 +17,12 @@
 		E578DA452068A22B00669A92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E578DA442068A22B00669A92 /* Assets.xcassets */; };
 		E578DA482068A22B00669A92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E578DA462068A22B00669A92 /* LaunchScreen.storyboard */; };
 		E578DA562068A26B00669A92 /* MessageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E578DA552068A26B00669A92 /* MessageFilterExtension.swift */; };
-		E578DA5A2068A26B00669A92 /* Message-Filter_Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E578DA532068A26B00669A92 /* Message-Filter_Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E578DA5A2068A26B00669A92 /* Message-Filter-Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E578DA532068A26B00669A92 /* Message-Filter-Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E5EC50EE2073875700E223F5 /* FilterRuleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EC50ED2073875700E223F5 /* FilterRuleGroup.swift */; };
-		EF3CC4CB4C1DA1D84E1B2FC9 /* Pods_Message_Filter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0978D58C9431E27775E183 /* Pods_Message_Filter.framework */; };
+		E5EC50F02074AC0E00E223F5 /* FilterRulePackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EC50EF2074AC0E00E223F5 /* FilterRulePackage.swift */; };
+		E5EC50F92074BFFE00E223F5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EC50F82074BFFE00E223F5 /* Extensions.swift */; };
+		E5EC50FB2074C02B00E223F5 /* GlobalStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EC50FA2074C02B00E223F5 /* GlobalStatics.swift */; };
+		E5EC51022074D48E00E223F5 /* GlobalStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EC51012074D48E00E223F5 /* GlobalStatics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				E578DA5A2068A26B00669A92 /* Message-Filter_Extension.appex in Embed App Extensions */,
+				E578DA5A2068A26B00669A92 /* Message-Filter-Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,12 +50,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1432DD8E43E0096F79546A67 /* Pods-Message-Filter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Message-Filter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Message-Filter/Pods-Message-Filter.release.xcconfig"; sourceTree = "<group>"; };
-		1C4B44A30ACD75DEA8D8977A /* Pods-Message-Filter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Message-Filter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Message-Filter/Pods-Message-Filter.debug.xcconfig"; sourceTree = "<group>"; };
-		80C9C9B66D838BD77FB10EFB /* Pods-Message-Filter_Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Message-Filter_Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Message-Filter_Extension/Pods-Message-Filter_Extension.release.xcconfig"; sourceTree = "<group>"; };
-		9C8B50C6CA877920A09FC637 /* Pods-Message-Filter_Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Message-Filter_Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Message-Filter_Extension/Pods-Message-Filter_Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		AB5E5B151979D5305385694A /* Pods_Message_Filter_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Message_Filter_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB0978D58C9431E27775E183 /* Pods_Message_Filter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Message_Filter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		223B451BC8D8F0415EE6F2BF /* Pods-Message-Filter-Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Message-Filter-Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Message-Filter-Extension/Pods-Message-Filter-Extension.release.xcconfig"; sourceTree = "<group>"; };
+		612B9974721876FF56C68792 /* Pods_Message_Filter_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Message_Filter_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74B0AE33FD8A187AED1C631E /* Pods_Message_Filter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Message_Filter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97E39F2E4E92F8609F0B47C7 /* Pods-Message-Filter-Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Message-Filter-Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Message-Filter-Extension/Pods-Message-Filter-Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		A91A4B37917A700936F3B574 /* Pods-Message-Filter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Message-Filter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Message-Filter/Pods-Message-Filter.release.xcconfig"; sourceTree = "<group>"; };
 		E52D44E4207233BD000ACF59 /* FilterRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRule.swift; sourceTree = "<group>"; };
 		E52D44E62072390D000ACF59 /* QueryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryRequest.swift; sourceTree = "<group>"; };
 		E578DA3A2068A22B00669A92 /* Message-Filter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Message-Filter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,10 +64,21 @@
 		E578DA442068A22B00669A92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E578DA472068A22B00669A92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E578DA492068A22B00669A92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E578DA532068A26B00669A92 /* Message-Filter_Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Message-Filter_Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E578DA532068A26B00669A92 /* Message-Filter-Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Message-Filter-Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E578DA552068A26B00669A92 /* MessageFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterExtension.swift; sourceTree = "<group>"; };
 		E578DA572068A26B00669A92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5EC50ED2073875700E223F5 /* FilterRuleGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRuleGroup.swift; sourceTree = "<group>"; };
+		E5EC50EF2074AC0E00E223F5 /* FilterRulePackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRulePackage.swift; sourceTree = "<group>"; };
+		E5EC50F12074B3DB00E223F5 /* Message-Filter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Message-Filter.entitlements"; sourceTree = "<group>"; };
+		E5EC50F22074B75A00E223F5 /* Message-Filter-Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Message-Filter-Extension.entitlements"; sourceTree = "<group>"; };
+		E5EC50F32074B98400E223F5 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5EC50F52074BA3F00E223F5 /* YYModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YYModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5EC50F82074BFFE00E223F5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E5EC50FA2074C02B00E223F5 /* GlobalStatics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalStatics.swift; sourceTree = "<group>"; };
+		E5EC50FE2074C6E200E223F5 /* Message-Filter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Message-Filter-Bridging-Header.h"; sourceTree = "<group>"; };
+		E5EC51012074D48E00E223F5 /* GlobalStatics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalStatics.swift; sourceTree = "<group>"; };
+		E5EC51032074D4DC00E223F5 /* Message-Filter-Extension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Message-Filter-Extension-Bridging-Header.h"; sourceTree = "<group>"; };
+		E931CC2BDE8494B6EF629250 /* Pods-Message-Filter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Message-Filter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Message-Filter/Pods-Message-Filter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF3CC4CB4C1DA1D84E1B2FC9 /* Pods_Message_Filter.framework in Frameworks */,
+				1C51B2A6552060D9D1486C52 /* Pods_Message_Filter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,20 +94,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E10E6217D84D9D0BF7DA361B /* Pods_Message_Filter_Extension.framework in Frameworks */,
+				86E120F6B00AC77604AD1B0D /* Pods_Message_Filter_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7A202C36E3D8F30DFFFF872B /* Pods */ = {
+		2548BD841060EF43EA2E602E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1C4B44A30ACD75DEA8D8977A /* Pods-Message-Filter.debug.xcconfig */,
-				1432DD8E43E0096F79546A67 /* Pods-Message-Filter.release.xcconfig */,
-				9C8B50C6CA877920A09FC637 /* Pods-Message-Filter_Extension.debug.xcconfig */,
-				80C9C9B66D838BD77FB10EFB /* Pods-Message-Filter_Extension.release.xcconfig */,
+				E5EC50F52074BA3F00E223F5 /* YYModel.framework */,
+				E5EC50F32074B98400E223F5 /* ObjectMapper.framework */,
+				74B0AE33FD8A187AED1C631E /* Pods_Message_Filter.framework */,
+				612B9974721876FF56C68792 /* Pods_Message_Filter_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6C69DBD87EF9D43A6D035D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E931CC2BDE8494B6EF629250 /* Pods-Message-Filter.debug.xcconfig */,
+				A91A4B37917A700936F3B574 /* Pods-Message-Filter.release.xcconfig */,
+				97E39F2E4E92F8609F0B47C7 /* Pods-Message-Filter-Extension.debug.xcconfig */,
+				223B451BC8D8F0415EE6F2BF /* Pods-Message-Filter-Extension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -101,11 +126,12 @@
 		E578DA312068A22B00669A92 = {
 			isa = PBXGroup;
 			children = (
+				E5EC50F22074B75A00E223F5 /* Message-Filter-Extension.entitlements */,
 				E578DA3C2068A22B00669A92 /* Message-Filter */,
 				E578DA542068A26B00669A92 /* Message-Filter-Extension */,
 				E578DA3B2068A22B00669A92 /* Products */,
-				7A202C36E3D8F30DFFFF872B /* Pods */,
-				F5BCA799D3DE2DD8666D235B /* Frameworks */,
+				2548BD841060EF43EA2E602E /* Frameworks */,
+				B6C69DBD87EF9D43A6D035D1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,7 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				E578DA3A2068A22B00669A92 /* Message-Filter.app */,
-				E578DA532068A26B00669A92 /* Message-Filter_Extension.appex */,
+				E578DA532068A26B00669A92 /* Message-Filter-Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,12 +147,15 @@
 		E578DA3C2068A22B00669A92 /* Message-Filter */ = {
 			isa = PBXGroup;
 			children = (
+				E5EC50F12074B3DB00E223F5 /* Message-Filter.entitlements */,
 				E5EC50EB207371AB00E223F5 /* AppDelegate */,
 				E5EC50EC207371B400E223F5 /* ViewController */,
 				E5EC50EA2073719A00E223F5 /* Rule */,
+				E5EC50F72074BFEC00E223F5 /* Utils */,
 				E578DA412068A22B00669A92 /* Main.storyboard */,
 				E578DA442068A22B00669A92 /* Assets.xcassets */,
 				E578DA462068A22B00669A92 /* LaunchScreen.storyboard */,
+				E5EC50FE2074C6E200E223F5 /* Message-Filter-Bridging-Header.h */,
 				E578DA492068A22B00669A92 /* Info.plist */,
 			);
 			path = "Message-Filter";
@@ -137,6 +166,8 @@
 			children = (
 				E578DA552068A26B00669A92 /* MessageFilterExtension.swift */,
 				E578DA572068A26B00669A92 /* Info.plist */,
+				E5EC51012074D48E00E223F5 /* GlobalStatics.swift */,
+				E5EC51032074D4DC00E223F5 /* Message-Filter-Extension-Bridging-Header.h */,
 			);
 			path = "Message-Filter-Extension";
 			sourceTree = "<group>";
@@ -144,9 +175,10 @@
 		E5EC50EA2073719A00E223F5 /* Rule */ = {
 			isa = PBXGroup;
 			children = (
-				E52D44E4207233BD000ACF59 /* FilterRule.swift */,
 				E52D44E62072390D000ACF59 /* QueryRequest.swift */,
+				E52D44E4207233BD000ACF59 /* FilterRule.swift */,
 				E5EC50ED2073875700E223F5 /* FilterRuleGroup.swift */,
+				E5EC50EF2074AC0E00E223F5 /* FilterRulePackage.swift */,
 			);
 			path = Rule;
 			sourceTree = "<group>";
@@ -167,13 +199,13 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		F5BCA799D3DE2DD8666D235B /* Frameworks */ = {
+		E5EC50F72074BFEC00E223F5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				DB0978D58C9431E27775E183 /* Pods_Message_Filter.framework */,
-				AB5E5B151979D5305385694A /* Pods_Message_Filter_Extension.framework */,
+				E5EC50F82074BFFE00E223F5 /* Extensions.swift */,
+				E5EC50FA2074C02B00E223F5 /* GlobalStatics.swift */,
 			);
-			name = Frameworks;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,13 +215,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E578DA4C2068A22B00669A92 /* Build configuration list for PBXNativeTarget "Message-Filter" */;
 			buildPhases = (
-				F0D1E1DC0217A710A1BF59F0 /* [CP] Check Pods Manifest.lock */,
+				44483A8B873C5DC24C07A60B /* [CP] Check Pods Manifest.lock */,
 				E578DA362068A22B00669A92 /* Sources */,
 				E578DA372068A22B00669A92 /* Frameworks */,
 				E578DA382068A22B00669A92 /* Resources */,
 				E578DA5E2068A26B00669A92 /* Embed App Extensions */,
-				713651C9C208B6142661A2AE /* [CP] Embed Pods Frameworks */,
-				79FEBCC5971C0243A3357251 /* [CP] Copy Pods Resources */,
+				98953605C3AF7BF3C5F430F8 /* [CP] Embed Pods Frameworks */,
+				45438799D1C2F60D5A5310A8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,23 +233,23 @@
 			productReference = E578DA3A2068A22B00669A92 /* Message-Filter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E578DA522068A26B00669A92 /* Message-Filter_Extension */ = {
+		E578DA522068A26B00669A92 /* Message-Filter-Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E578DA5B2068A26B00669A92 /* Build configuration list for PBXNativeTarget "Message-Filter_Extension" */;
+			buildConfigurationList = E578DA5B2068A26B00669A92 /* Build configuration list for PBXNativeTarget "Message-Filter-Extension" */;
 			buildPhases = (
-				3AC62665C98C3DF19B01D9A3 /* [CP] Check Pods Manifest.lock */,
+				13919D2E2894EE6051F19308 /* [CP] Check Pods Manifest.lock */,
 				E578DA4F2068A26B00669A92 /* Sources */,
 				E578DA502068A26B00669A92 /* Frameworks */,
 				E578DA512068A26B00669A92 /* Resources */,
-				70A47C92915DD13AB9F7A006 /* [CP] Copy Pods Resources */,
+				0542D2D87FC54F6688504259 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Message-Filter_Extension";
+			name = "Message-Filter-Extension";
 			productName = SMS_Blocker_Extension;
-			productReference = E578DA532068A26B00669A92 /* Message-Filter_Extension.appex */;
+			productReference = E578DA532068A26B00669A92 /* Message-Filter-Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -235,6 +267,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
 								enabled = 0;
 							};
 						};
@@ -242,6 +277,11 @@
 					E578DA522068A26B00669A92 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -259,7 +299,7 @@
 			projectRoot = "";
 			targets = (
 				E578DA392068A22B00669A92 /* Message-Filter */,
-				E578DA522068A26B00669A92 /* Message-Filter_Extension */,
+				E578DA522068A26B00669A92 /* Message-Filter-Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -285,7 +325,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3AC62665C98C3DF19B01D9A3 /* [CP] Check Pods Manifest.lock */ = {
+		0542D2D87FC54F6688504259 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Message-Filter-Extension/Pods-Message-Filter-Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		13919D2E2894EE6051F19308 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -296,62 +351,14 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Message-Filter_Extension-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Message-Filter-Extension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		70A47C92915DD13AB9F7A006 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Message-Filter_Extension/Pods-Message-Filter_Extension-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		713651C9C208B6142661A2AE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Message-Filter/Pods-Message-Filter-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Message-Filter/Pods-Message-Filter-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		79FEBCC5971C0243A3357251 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Message-Filter/Pods-Message-Filter-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F0D1E1DC0217A710A1BF59F0 /* [CP] Check Pods Manifest.lock */ = {
+		44483A8B873C5DC24C07A60B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -369,6 +376,39 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		45438799D1C2F60D5A5310A8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Message-Filter/Pods-Message-Filter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98953605C3AF7BF3C5F430F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Message-Filter/Pods-Message-Filter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Message-Filter/Pods-Message-Filter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -378,9 +418,12 @@
 			files = (
 				E52D44E72072390D000ACF59 /* QueryRequest.swift in Sources */,
 				E578DA402068A22B00669A92 /* ViewController.swift in Sources */,
+				E5EC50FB2074C02B00E223F5 /* GlobalStatics.swift in Sources */,
+				E5EC50F02074AC0E00E223F5 /* FilterRulePackage.swift in Sources */,
 				E5EC50EE2073875700E223F5 /* FilterRuleGroup.swift in Sources */,
 				E52D44E5207233BD000ACF59 /* FilterRule.swift in Sources */,
 				E578DA3E2068A22B00669A92 /* AppDelegate.swift in Sources */,
+				E5EC50F92074BFFE00E223F5 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5EC51022074D48E00E223F5 /* GlobalStatics.swift in Sources */,
 				E578DA562068A26B00669A92 /* MessageFilterExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,7 +441,7 @@
 /* Begin PBXTargetDependency section */
 		E578DA592068A26B00669A92 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E578DA522068A26B00669A92 /* Message-Filter_Extension */;
+			target = E578DA522068A26B00669A92 /* Message-Filter-Extension */;
 			targetProxy = E578DA582068A26B00669A92 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -535,42 +579,49 @@
 		};
 		E578DA4D2068A22B00669A92 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C4B44A30ACD75DEA8D8977A /* Pods-Message-Filter.debug.xcconfig */;
+			baseConfigurationReference = E931CC2BDE8494B6EF629250 /* Pods-Message-Filter.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Message-Filter/Message-Filter.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2YBFQ59LED;
 				INFOPLIST_FILE = "Message-Filter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duliuqing.Message-Filter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Message-Filter/Message-Filter-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
 		E578DA4E2068A22B00669A92 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1432DD8E43E0096F79546A67 /* Pods-Message-Filter.release.xcconfig */;
+			baseConfigurationReference = A91A4B37917A700936F3B574 /* Pods-Message-Filter.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Message-Filter/Message-Filter.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2YBFQ59LED;
 				INFOPLIST_FILE = "Message-Filter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duliuqing.Message-Filter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Message-Filter/Message-Filter-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};
 		E578DA5C2068A26B00669A92 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C8B50C6CA877920A09FC637 /* Pods-Message-Filter_Extension.debug.xcconfig */;
+			baseConfigurationReference = E931CC2BDE8494B6EF629250 /* Pods-Message-Filter.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Message-Filter-Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2YBFQ59LED;
 				INFOPLIST_FILE = "$(SRCROOT)/Message-Filter-Extension/Info.plist";
@@ -578,15 +629,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duliuqing.Message-Filter.Message-Filter-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Message-Filter-Extension/Message-Filter-Extension-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
 		E578DA5D2068A26B00669A92 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80C9C9B66D838BD77FB10EFB /* Pods-Message-Filter_Extension.release.xcconfig */;
+			baseConfigurationReference = A91A4B37917A700936F3B574 /* Pods-Message-Filter.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Message-Filter-Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2YBFQ59LED;
 				INFOPLIST_FILE = "$(SRCROOT)/Message-Filter-Extension/Info.plist";
@@ -594,8 +648,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duliuqing.Message-Filter.Message-Filter-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Message-Filter-Extension/Message-Filter-Extension-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};
@@ -620,7 +676,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E578DA5B2068A26B00669A92 /* Build configuration list for PBXNativeTarget "Message-Filter_Extension" */ = {
+		E578DA5B2068A26B00669A92 /* Build configuration list for PBXNativeTarget "Message-Filter-Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E578DA5C2068A26B00669A92 /* Debug */,
