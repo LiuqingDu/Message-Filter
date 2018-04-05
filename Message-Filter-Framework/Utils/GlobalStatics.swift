@@ -8,5 +8,5 @@
 
 import Foundation
 
-let MessageFilterAppGroupName = "group.com.duliuqing.messagefilter"
-let MessageFilterExtensionRuleKey = "MessageFilterExtensionRuleKey"
+public let MessageFilterAppGroupName = "group.com.duliuqing.messagefilter"
+public let MessageFilterExtensionRuleKey = "MessageFilterExtensionRuleKey"

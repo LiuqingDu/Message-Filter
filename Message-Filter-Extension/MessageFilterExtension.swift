@@ -7,6 +7,7 @@
 //
 
 import IdentityLookup
+import Message_Filter_Framework
 
 final class MessageFilterExtension: ILMessageFilterExtension {}
 
