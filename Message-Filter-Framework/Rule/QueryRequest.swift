@@ -12,7 +12,7 @@ import IdentityLookup
 /// QueryRequest 简化类
 /// 从系统的 ILMessageFilterQueryRequest 简化而来的类，包含发送者和信息内容
 
-class QueryRequest: NSObject {
+public class QueryRequest: NSObject {
     public var sender: String = ""
     public var messageBody: String = ""
     

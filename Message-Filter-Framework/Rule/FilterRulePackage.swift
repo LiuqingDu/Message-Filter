@@ -9,7 +9,7 @@
 import Foundation
 import IdentityLookup
 
-class FilterRulePackage: NSObject {
+public class FilterRulePackage: NSObject {
     
     public var whiteFilterRuleGroup = Array<FilterRuleGroup>()
     public var blackFilterRuleGroup = Array<FilterRuleGroup>()

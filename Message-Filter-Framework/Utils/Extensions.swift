@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - 扩展 UserDefaults，用于简便地保存和读取自定义对象
 //extension UserDefaults {
@@ -27,3 +28,44 @@ import Foundation
 //        return nil
 //    }
 //}
+
+@IBDesignable
+extension UIView
+{
+    
+    @IBInspectable public var cornerRadius: CGFloat
+    {
+        set (radius) {
+            layer.cornerRadius = radius
+            layer.masksToBounds = radius > 0
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+    
+    @IBInspectable public var borderWidth: CGFloat
+    {
+        set (borderWidth) {
+            self.layer.borderWidth = borderWidth
+        }
+        get {
+            return self.layer.borderWidth
+        }
+    }
+    
+    @IBInspectable public var borderColor:UIColor?
+    {
+        set (color) {
+            self.layer.borderColor = color?.cgColor
+        }
+        get {
+            if let color = self.layer.borderColor
+            {
+                return UIColor(cgColor: color)
+            } else {
+                return nil
+            }
+        }
+    }
+}

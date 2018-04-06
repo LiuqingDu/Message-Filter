@@ -12,7 +12,7 @@ import Foundation
 ///
 /// - FilterRuleTargetSender: 发送者
 /// - FilterRuleTargetContent: 消息内容
-enum FilterRuleTarget: Int {
+public enum FilterRuleTarget: Int {
     case FilterRuleTargetSender = 0, FilterRuleTargetContent
 }
 
@@ -23,12 +23,12 @@ enum FilterRuleTarget: Int {
 /// - FilterRuleTypeContains: 包含
 /// - FilterRuleTypeNotContains: 不包含
 /// - FilterRuleTypeRegex: 正则表达式
-enum FilterRuleType: Int {
+public enum FilterRuleType: Int {
     case FilterRuleTypePrefix = 0, FilterRuleTypeSuffix, FilterRuleTypeContains, FilterRuleTypeNotContains, FilterRuleTypeRegex
 }
 
 /// 过滤规则
-class FilterRule: NSObject {
+public class FilterRule: NSObject {
     
     public var ruleTarget: FilterRuleTarget = .FilterRuleTargetContent
     public var ruleType  : FilterRuleType = .FilterRuleTypeContains

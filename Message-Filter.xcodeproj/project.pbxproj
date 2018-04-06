@@ -10,6 +10,8 @@
 		1C51B2A6552060D9D1486C52 /* Pods_Message_Filter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B0AE33FD8A187AED1C631E /* Pods_Message_Filter.framework */; };
 		86E120F6B00AC77604AD1B0D /* Pods_Message_Filter_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612B9974721876FF56C68792 /* Pods_Message_Filter_Extension.framework */; };
 		BD0DB775AF3BC0E47BBA8D4C /* Pods_Message_Filter_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AEC774280B787B042D54F57 /* Pods_Message_Filter_Framework.framework */; };
+		E55AB1C5207793E80030A084 /* FilterRuleGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55AB1C3207793E80030A084 /* FilterRuleGroupCell.swift */; };
+		E55AB1C6207793E80030A084 /* FilterRuleGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55AB1C4207793E80030A084 /* FilterRuleGroupCell.xib */; };
 		E578DA3E2068A22B00669A92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E578DA3D2068A22B00669A92 /* AppDelegate.swift */; };
 		E578DA402068A22B00669A92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E578DA3F2068A22B00669A92 /* ViewController.swift */; };
 		E578DA432068A22B00669A92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E578DA412068A22B00669A92 /* Main.storyboard */; };
@@ -24,9 +26,7 @@
 		E5EC51482076583100E223F5 /* FilterRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D44E4207233BD000ACF59 /* FilterRule.swift */; };
 		E5EC51492076583400E223F5 /* QueryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D44E62072390D000ACF59 /* QueryRequest.swift */; };
 		E5EC514A20765A2000E223F5 /* Message_Filter_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5EC513620764D2400E223F5 /* Message_Filter_Framework.framework */; };
-		E5EC514D20765AE800E223F5 /* Message-Filter-Framework-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = E5EC514C20765AAD00E223F5 /* Message-Filter-Framework-Header.h */; };
 		E5EC514E207660A900E223F5 /* Message_Filter_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5EC513620764D2400E223F5 /* Message_Filter_Framework.framework */; };
-		E5EC514F207662E400E223F5 /* Message_Filter_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5EC513620764D2400E223F5 /* Message_Filter_Framework.framework */; };
 		E5EC5150207662E400E223F5 /* Message_Filter_Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5EC513620764D2400E223F5 /* Message_Filter_Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -83,6 +83,8 @@
 		A91A4B37917A700936F3B574 /* Pods-Message-Filter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Message-Filter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Message-Filter/Pods-Message-Filter.release.xcconfig"; sourceTree = "<group>"; };
 		E52D44E4207233BD000ACF59 /* FilterRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRule.swift; sourceTree = "<group>"; };
 		E52D44E62072390D000ACF59 /* QueryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryRequest.swift; sourceTree = "<group>"; };
+		E55AB1C3207793E80030A084 /* FilterRuleGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRuleGroupCell.swift; sourceTree = "<group>"; };
+		E55AB1C4207793E80030A084 /* FilterRuleGroupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterRuleGroupCell.xib; sourceTree = "<group>"; };
 		E578DA3A2068A22B00669A92 /* Message-Filter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Message-Filter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E578DA3D2068A22B00669A92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E578DA3F2068A22B00669A92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,7 +116,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5EC514E207660A900E223F5 /* Message_Filter_Framework.framework in Frameworks */,
-				E5EC514F207662E400E223F5 /* Message_Filter_Framework.framework in Frameworks */,
 				1C51B2A6552060D9D1486C52 /* Pods_Message_Filter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +164,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E55AB1C7207799950030A084 /* FilterRuleGroupCell */ = {
+			isa = PBXGroup;
+			children = (
+				E55AB1C4207793E80030A084 /* FilterRuleGroupCell.xib */,
+				E55AB1C3207793E80030A084 /* FilterRuleGroupCell.swift */,
+			);
+			path = FilterRuleGroupCell;
+			sourceTree = "<group>";
+		};
 		E578DA312068A22B00669A92 = {
 			isa = PBXGroup;
 			children = (
@@ -188,14 +198,15 @@
 		E578DA3C2068A22B00669A92 /* Message-Filter */ = {
 			isa = PBXGroup;
 			children = (
-				E5EC50F12074B3DB00E223F5 /* Message-Filter.entitlements */,
 				E5EC50EB207371AB00E223F5 /* AppDelegate */,
 				E5EC50EC207371B400E223F5 /* ViewController */,
+				E55AB1C7207799950030A084 /* FilterRuleGroupCell */,
 				E578DA412068A22B00669A92 /* Main.storyboard */,
 				E578DA442068A22B00669A92 /* Assets.xcassets */,
 				E578DA462068A22B00669A92 /* LaunchScreen.storyboard */,
-				E5EC50FE2074C6E200E223F5 /* Message-Filter-Bridging-Header.h */,
 				E578DA492068A22B00669A92 /* Info.plist */,
+				E5EC50F12074B3DB00E223F5 /* Message-Filter.entitlements */,
+				E5EC50FE2074C6E200E223F5 /* Message-Filter-Bridging-Header.h */,
 			);
 			path = "Message-Filter";
 			sourceTree = "<group>";
@@ -203,9 +214,9 @@
 		E578DA542068A26B00669A92 /* Message-Filter-Extension */ = {
 			isa = PBXGroup;
 			children = (
-				E5EC50F22074B75A00E223F5 /* Message-Filter-Extension.entitlements */,
 				E578DA552068A26B00669A92 /* MessageFilterExtension.swift */,
 				E578DA572068A26B00669A92 /* Info.plist */,
+				E5EC50F22074B75A00E223F5 /* Message-Filter-Extension.entitlements */,
 				E5EC51032074D4DC00E223F5 /* Message-Filter-Extension-Bridging-Header.h */,
 			);
 			path = "Message-Filter-Extension";
@@ -265,7 +276,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5EC514D20765AE800E223F5 /* Message-Filter-Framework-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +410,7 @@
 				E578DA482068A22B00669A92 /* LaunchScreen.storyboard in Resources */,
 				E578DA452068A22B00669A92 /* Assets.xcassets in Resources */,
 				E578DA432068A22B00669A92 /* Main.storyboard in Resources */,
+				E55AB1C6207793E80030A084 /* FilterRuleGroupCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,10 +522,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Message-Filter/Pods-Message-Filter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/Font-Awesome-Swift/Font_Awesome_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/RAMPaperSwitch/RAMPaperSwitch.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Font_Awesome_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMPaperSwitch.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,6 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E55AB1C5207793E80030A084 /* FilterRuleGroupCell.swift in Sources */,
 				E578DA402068A22B00669A92 /* ViewController.swift in Sources */,
 				E578DA3E2068A22B00669A92 /* AppDelegate.swift in Sources */,
 			);
@@ -720,15 +738,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E931CC2BDE8494B6EF629250 /* Pods-Message-Filter.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Message-Filter/Message-Filter.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2YBFQ59LED;
 				INFOPLIST_FILE = "Message-Filter/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duliuqing.Message-Filter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Message-Filter/Message-Filter-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -740,15 +760,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A91A4B37917A700936F3B574 /* Pods-Message-Filter.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Message-Filter/Message-Filter.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2YBFQ59LED;
 				INFOPLIST_FILE = "Message-Filter/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duliuqing.Message-Filter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Message-Filter/Message-Filter-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -764,6 +786,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2YBFQ59LED;
 				INFOPLIST_FILE = "$(SRCROOT)/Message-Filter-Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duliuqing.Message-Filter.Message-Filter-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -783,6 +806,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2YBFQ59LED;
 				INFOPLIST_FILE = "$(SRCROOT)/Message-Filter-Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duliuqing.Message-Filter.Message-Filter-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -798,6 +822,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 218AEBDC877EFDB1A33B2661 /* Pods-Message-Filter-Framework.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -827,6 +852,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 548187ED6CCDEE864D4D15A6 /* Pods-Message-Filter-Framework.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;

@@ -46,17 +46,26 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
     
     private func offlineAction(for queryRequest: ILMessageFilterQueryRequest) -> ILMessageFilterAction {
         
+        // Replace with logic to perform offline check whether to filter first (if possible).
+        // 读取已保存的过滤条件包
         let userDefaults = UserDefaults(suiteName: MessageFilterAppGroupName)
         let ruleString: String? = userDefaults?.object(forKey: MessageFilterExtensionRuleKey) as? String
+        // 如果没有过滤条件则放行
         if (ruleString == nil) {
             return .allow
         }
-        
-        //TODO: - 转换 ruleString 到对象
-        
-        
-        // Replace with logic to perform offline check whether to filter first (if possible).
-        return .none
+        // 转换成过滤条件对象
+        let rule = FilterRulePackage.yy_model(withJSON: ruleString!)
+        // 如果没有转换出对象则放行
+        if (rule == nil) {
+            return .allow
+        }
+        // 根据过滤条件包判断，如果匹配则过滤
+        if (rule!.isUnwantedMessageBy(ILMessageFilterQueryRequest: queryRequest)) {
+            return .filter
+        }
+        // 没有匹配上则放行
+        return .allow
     }
     
     private func action(for networkResponse: ILNetworkResponse) -> ILMessageFilterAction {

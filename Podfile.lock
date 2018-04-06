@@ -1,12 +1,23 @@
 PODS:
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
+  - Font-Awesome-Swift (1.7.2)
+  - RAMPaperSwitch (2.1.0)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
+  - ChameleonFramework/Swift
+  - Font-Awesome-Swift
+  - RAMPaperSwitch
   - YYModel
 
 SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Font-Awesome-Swift: 83ab9db365379ee6025167cec67bdc5d3226a811
+  RAMPaperSwitch: ef08af0400a040c9850e09253280deb77510becb
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 123ead26839bd2a29c0b4ec060aef97c5a024297
+PODFILE CHECKSUM: 11900f68a3f3b28daf6335a2215df01ed5c36ceb
 
 COCOAPODS: 1.4.0

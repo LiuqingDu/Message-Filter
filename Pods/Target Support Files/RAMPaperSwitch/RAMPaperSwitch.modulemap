@@ -1,0 +1,6 @@
+framework module RAMPaperSwitch {
+  umbrella header "RAMPaperSwitch-umbrella.h"
+
+  export *
+  module * { export * }
+}

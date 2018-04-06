@@ -11,7 +11,7 @@ import Foundation
 /// 过滤条件组
 /// 包含一个过滤条件数组
 /// 一个方法检查传入的 QueryRequest 是否匹配过滤条件组
-class FilterRuleGroup: NSObject {
+public class FilterRuleGroup: NSObject {
     
     public var rules = Array<FilterRule>()
     
