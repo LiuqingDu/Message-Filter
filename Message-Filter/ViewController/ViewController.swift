@@ -34,7 +34,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 154.0
+        let cell = table_filterRuleGroup.dequeueReusableCell(withIdentifier: "FilterRuleGroupCell") as! FilterRuleGroupCell
+        return (cell.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
