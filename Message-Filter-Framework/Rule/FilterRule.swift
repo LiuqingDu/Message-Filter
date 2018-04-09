@@ -34,11 +34,7 @@ public class FilterRule: NSObject {
     public var ruleType  : FilterRuleType = .FilterRuleTypeContains
     public var keyword   : String = ""
     
-    override init() {
-        super.init()
-    }
-    
-    init(withRuleTarget _ruleTarget: FilterRuleTarget, ruleType _ruleType: FilterRuleType, keyword _keyword: String){
+    public init(withRuleTarget _ruleTarget: FilterRuleTarget, ruleType _ruleType: FilterRuleType, keyword _keyword: String){
         self.ruleType = _ruleType
         self.ruleTarget = _ruleTarget
         self.keyword = _keyword

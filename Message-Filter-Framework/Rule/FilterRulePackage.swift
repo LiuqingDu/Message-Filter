@@ -11,8 +11,8 @@ import IdentityLookup
 
 public class FilterRulePackage: NSObject {
     
-    public var whiteFilterRuleGroup = Array<FilterRuleGroup>()
-    public var blackFilterRuleGroup = Array<FilterRuleGroup>()
+    private var whiteFilterRuleGroup = Array<FilterRuleGroup>()
+    private var blackFilterRuleGroup = Array<FilterRuleGroup>()
     
     /// 单例
     public static var sharedInstance: FilterRulePackage {
@@ -47,7 +47,7 @@ public class FilterRulePackage: NSObject {
     /// 保存到本地 UserDefaults
     ///
     /// - Returns: 是否保存成功。返回否是因为没有可保存数据
-    public static func saveToUserDefault() -> Bool {
+    public func saveToUserDefault() -> Bool {
         let ruleString = self.yy_modelToJSONString()
         if (ruleString == nil) {
             return false

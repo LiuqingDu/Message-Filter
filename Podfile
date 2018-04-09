@@ -11,6 +11,7 @@ target 'Message-Filter' do
   pod 'RAMPaperSwitch'
   pod 'Font-Awesome-Swift'
   pod 'ChameleonFramework/Swift'
+  pod 'SwipeCellKit'
 
 end
 

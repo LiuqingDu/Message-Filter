@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4457B42CC41425D7F8F1EBB988F93134'
-               BlueprintName = 'RAMPaperSwitch'
+               BlueprintIdentifier = 'BFF20119F1C7454DB3E4C2F8D6B9F27B'
+               BlueprintName = 'SwipeCellKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'RAMPaperSwitch.framework'>
+               BuildableName = 'SwipeCellKit.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

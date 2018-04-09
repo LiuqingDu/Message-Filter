@@ -15,13 +15,14 @@ class FilterRuleGroupCell: UITableViewCell {
     @IBOutlet weak var switch_ruleActive: RAMPaperSwitch!
     @IBOutlet weak var image_icon: UIImageView!
     @IBOutlet weak var label_rule: UILabel!
+    @IBOutlet weak var label_ruleTarget: UILabel!
+    @IBOutlet weak var label_ruleType: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        switch_ruleActive.onTintColor = UIColor.randomFlat()
-        let size = label_rule.sizeThatFits(CGSize(width: label_rule.frame.size.width, height: CGFloat(MAXFLOAT)))
-        label_rule.frame = CGRect(x: label_rule.frame.origin.x, y: label_rule.frame.origin.y, width: label_rule.frame.size.width, height: size.height)
+        switch_ruleActive.onTintColor = UIColor.init(randomFlatColorOf: .light)
+        switch_ruleActive.duration = 0.2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

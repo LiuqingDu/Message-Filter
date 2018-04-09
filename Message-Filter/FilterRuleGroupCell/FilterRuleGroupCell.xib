@@ -12,15 +12,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="132" id="KGk-i7-Jjw" customClass="FilterRuleGroupCell" customModule="Message_Filter" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="384" height="132"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="254" id="KGk-i7-Jjw" customClass="FilterRuleGroupCell" customModule="Message_Filter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="254"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="384" height="131.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="385" height="253.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Thz-I6-ESn">
-                        <rect key="frame" x="0.0" y="0.0" width="384" height="132"/>
+                        <rect key="frame" x="20" y="10" width="345" height="233.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rtm-zj-Pfq">
                                 <rect key="frame" x="20" y="8" width="60" height="60"/>
@@ -29,21 +29,39 @@
                                     <constraint firstAttribute="height" constant="60" id="PFd-Ye-73p"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UR6-Pz-txE">
-                                <rect key="frame" x="20" y="68" width="344" height="52"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="253" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UR6-Pz-txE">
+                                <rect key="frame" x="20" y="68" width="305" height="92"/>
                                 <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Labsssesdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfdasdfwefwasdfasdfasdfqefqwefqwefqwefqwefqweferwgvwergwrtgerfqwefqwefsfggewrgl</string>
+                                    <fragment content="abcdefghijklmnopqrstuvwxyz1234567890">
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz1234567890">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4w1-g4-aUJ" customClass="RAMPaperSwitch" customModule="RAMPaperSwitch">
-                                <rect key="frame" x="315" y="23" width="51" height="31"/>
+                                <rect key="frame" x="276" y="23" width="51" height="31"/>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="检测目标：发件人和信息内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hk4-Si-gfs">
+                                <rect key="frame" x="20" y="170" width="305" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="检测类型：正则表达式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQF-3P-qa2">
+                                <rect key="frame" x="20" y="201" width="305" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="UR6-Pz-txE" firstAttribute="top" secondItem="rtm-zj-Pfq" secondAttribute="bottom" id="0S8-hX-xiY"/>
@@ -51,31 +69,40 @@
                             <constraint firstItem="rtm-zj-Pfq" firstAttribute="leading" secondItem="Thz-I6-ESn" secondAttribute="leading" constant="20" id="3f4-r8-LBs"/>
                             <constraint firstItem="rtm-zj-Pfq" firstAttribute="top" secondItem="Thz-I6-ESn" secondAttribute="top" constant="8" id="Ezw-XK-xFG"/>
                             <constraint firstItem="4w1-g4-aUJ" firstAttribute="trailing" secondItem="Thz-I6-ESn" secondAttribute="trailing" constant="-20" id="IVt-w0-xby"/>
+                            <constraint firstItem="Hk4-Si-gfs" firstAttribute="trailing" secondItem="4w1-g4-aUJ" secondAttribute="trailing" id="QeH-TW-N3n"/>
                             <constraint firstItem="4w1-g4-aUJ" firstAttribute="centerY" secondItem="rtm-zj-Pfq" secondAttribute="centerY" id="Sg6-Er-0DJ"/>
-                            <constraint firstAttribute="bottom" secondItem="UR6-Pz-txE" secondAttribute="bottom" constant="12" id="fGp-Dc-LtB"/>
+                            <constraint firstItem="Hk4-Si-gfs" firstAttribute="top" secondItem="UR6-Pz-txE" secondAttribute="bottom" constant="10" id="cGj-8W-RLM"/>
+                            <constraint firstItem="Hk4-Si-gfs" firstAttribute="leading" secondItem="rtm-zj-Pfq" secondAttribute="leading" id="h5Q-Te-cbG"/>
+                            <constraint firstItem="fQF-3P-qa2" firstAttribute="trailing" secondItem="4w1-g4-aUJ" secondAttribute="trailing" id="hft-cr-eYk"/>
                             <constraint firstItem="UR6-Pz-txE" firstAttribute="trailing" secondItem="4w1-g4-aUJ" secondAttribute="trailing" id="jQa-Yd-cyl"/>
+                            <constraint firstItem="fQF-3P-qa2" firstAttribute="leading" secondItem="rtm-zj-Pfq" secondAttribute="leading" id="lTU-oT-eDM"/>
+                            <constraint firstAttribute="bottom" secondItem="fQF-3P-qa2" secondAttribute="bottom" constant="12" id="uON-dE-yuV"/>
+                            <constraint firstItem="fQF-3P-qa2" firstAttribute="top" secondItem="Hk4-Si-gfs" secondAttribute="bottom" constant="10" id="x2y-RT-rDJ"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="30"/>
+                                <real key="value" value="10"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Thz-I6-ESn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1yF-gS-eqd"/>
-                    <constraint firstItem="Thz-I6-ESn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5BG-xw-3oj"/>
-                    <constraint firstItem="Thz-I6-ESn" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" id="MJO-pr-u7s"/>
-                    <constraint firstItem="Thz-I6-ESn" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" id="VVv-x6-USO"/>
+                    <constraint firstItem="Thz-I6-ESn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="1yF-gS-eqd"/>
+                    <constraint firstItem="Thz-I6-ESn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="5BG-xw-3oj"/>
+                    <constraint firstItem="Thz-I6-ESn" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" constant="-20" id="MJO-pr-u7s"/>
+                    <constraint firstItem="Thz-I6-ESn" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" constant="-10" id="VVv-x6-USO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="image_icon" destination="rtm-zj-Pfq" id="wcH-XM-R5T"/>
                 <outlet property="label_rule" destination="UR6-Pz-txE" id="tWz-K8-dD4"/>
+                <outlet property="label_ruleTarget" destination="Hk4-Si-gfs" id="IW0-oT-QZM"/>
+                <outlet property="label_ruleType" destination="fQF-3P-qa2" id="81q-vw-wNS"/>
                 <outlet property="switch_ruleActive" destination="4w1-g4-aUJ" id="cns-sl-QLI"/>
             </connections>
-            <point key="canvasLocation" x="-74" y="98"/>
+            <point key="canvasLocation" x="-73.5" y="159"/>
         </tableViewCell>
     </objects>
 </document>

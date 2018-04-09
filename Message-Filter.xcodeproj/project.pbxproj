@@ -10,6 +10,8 @@
 		1C51B2A6552060D9D1486C52 /* Pods_Message_Filter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B0AE33FD8A187AED1C631E /* Pods_Message_Filter.framework */; };
 		86E120F6B00AC77604AD1B0D /* Pods_Message_Filter_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612B9974721876FF56C68792 /* Pods_Message_Filter_Extension.framework */; };
 		BD0DB775AF3BC0E47BBA8D4C /* Pods_Message_Filter_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AEC774280B787B042D54F57 /* Pods_Message_Filter_Framework.framework */; };
+		E5120BE4207AF61000B2FF5C /* GlobalStatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5120BE3207AF61000B2FF5C /* GlobalStatics.swift */; };
+		E5120BE7207B6CA300B2FF5C /* AddRuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5120BE6207B6CA300B2FF5C /* AddRuleViewController.swift */; };
 		E55AB1C5207793E80030A084 /* FilterRuleGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55AB1C3207793E80030A084 /* FilterRuleGroupCell.swift */; };
 		E55AB1C6207793E80030A084 /* FilterRuleGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55AB1C4207793E80030A084 /* FilterRuleGroupCell.xib */; };
 		E578DA3E2068A22B00669A92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E578DA3D2068A22B00669A92 /* AppDelegate.swift */; };
@@ -81,6 +83,8 @@
 		74B0AE33FD8A187AED1C631E /* Pods_Message_Filter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Message_Filter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E39F2E4E92F8609F0B47C7 /* Pods-Message-Filter-Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Message-Filter-Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Message-Filter-Extension/Pods-Message-Filter-Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		A91A4B37917A700936F3B574 /* Pods-Message-Filter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Message-Filter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Message-Filter/Pods-Message-Filter.release.xcconfig"; sourceTree = "<group>"; };
+		E5120BE3207AF61000B2FF5C /* GlobalStatics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalStatics.swift; sourceTree = "<group>"; };
+		E5120BE6207B6CA300B2FF5C /* AddRuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRuleViewController.swift; sourceTree = "<group>"; };
 		E52D44E4207233BD000ACF59 /* FilterRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRule.swift; sourceTree = "<group>"; };
 		E52D44E62072390D000ACF59 /* QueryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryRequest.swift; sourceTree = "<group>"; };
 		E55AB1C3207793E80030A084 /* FilterRuleGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRuleGroupCell.swift; sourceTree = "<group>"; };
@@ -164,6 +168,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E5120BE5207AF61600B2FF5C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E5120BE3207AF61000B2FF5C /* GlobalStatics.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		E55AB1C7207799950030A084 /* FilterRuleGroupCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +213,7 @@
 				E5EC50EB207371AB00E223F5 /* AppDelegate */,
 				E5EC50EC207371B400E223F5 /* ViewController */,
 				E55AB1C7207799950030A084 /* FilterRuleGroupCell */,
+				E5120BE5207AF61600B2FF5C /* Utils */,
 				E578DA412068A22B00669A92 /* Main.storyboard */,
 				E578DA442068A22B00669A92 /* Assets.xcassets */,
 				E578DA462068A22B00669A92 /* LaunchScreen.storyboard */,
@@ -245,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				E578DA3F2068A22B00669A92 /* ViewController.swift */,
+				E5120BE6207B6CA300B2FF5C /* AddRuleViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -525,6 +539,7 @@
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Font-Awesome-Swift/Font_Awesome_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/RAMPaperSwitch/RAMPaperSwitch.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -532,6 +547,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Font_Awesome_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMPaperSwitch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,7 +578,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E55AB1C5207793E80030A084 /* FilterRuleGroupCell.swift in Sources */,
+				E5120BE7207B6CA300B2FF5C /* AddRuleViewController.swift in Sources */,
 				E578DA402068A22B00669A92 /* ViewController.swift in Sources */,
+				E5120BE4207AF61000B2FF5C /* GlobalStatics.swift in Sources */,
 				E578DA3E2068A22B00669A92 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
