@@ -55,7 +55,7 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
             return .allow
         }
         // 转换成过滤条件对象
-        let rule = FilterRulePackage.yy_model(withJSON: ruleString!)
+        var rule: FilterRulePackage?
         // 如果没有转换出对象则放行
         if (rule == nil) {
             return .allow

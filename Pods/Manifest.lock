@@ -5,22 +5,19 @@ PODS:
   - Font-Awesome-Swift (1.7.2)
   - RAMPaperSwitch (2.1.0)
   - SwipeCellKit (2.1.0)
-  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift
   - Font-Awesome-Swift
   - RAMPaperSwitch
   - SwipeCellKit
-  - YYModel
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Font-Awesome-Swift: 83ab9db365379ee6025167cec67bdc5d3226a811
   RAMPaperSwitch: ef08af0400a040c9850e09253280deb77510becb
   SwipeCellKit: 80bdb188166484d8a0d813d9fd7748ad33181815
-  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 27f4abc2413bdd4bbae770521ee84105e11c1cfa
+PODFILE CHECKSUM: e24a43bf4c8737b607aef636638604238b05a041
 
 COCOAPODS: 1.4.0

@@ -9,6 +9,4 @@
 #ifndef Message_Filter_Framework_Header_h
 #define Message_Filter_Framework_Header_h
 
-#import "YYModel.h"
-
 #endif /* Message_Filter_Framework_Header_h */

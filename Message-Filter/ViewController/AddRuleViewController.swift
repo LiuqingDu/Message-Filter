@@ -11,14 +11,18 @@ import Message_Filter_Framework
 
 class AddRuleViewController: UITableViewController {
     
-    private var rulePackage = FilterRulePackage()
+    private var rulePackage: FilterRulePackage!
 
     @IBOutlet weak var txt_ruleString: UITextView!
     @IBAction func addRule(_ sender: Any) {
         let filterRule = FilterRule(withRuleTarget: FilterRuleTarget.FilterRuleTargetSender, ruleType: FilterRuleType.FilterRuleTypeContains, keyword: txt_ruleString.text)
-        FilterRulePackage.sharedInstance.blackFilterRuleGroup.append(contentsOf: filterRule)
-        FilterRulePackage.sharedInstance.saveToUserDefault()
-        
+        let filterRuleGroup = FilterRuleGroup()
+        filterRuleGroup.rules.append(filterRule)
+        rulePackage = FilterRulePackage.sharedInstance
+        rulePackage.blackFilterRuleGroup.append(filterRuleGroup)
+        print(rulePackage.blackFilterRuleGroup.count)
+        print(rulePackage.saveToUserDefault())
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

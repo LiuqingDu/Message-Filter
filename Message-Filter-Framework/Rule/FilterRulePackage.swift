@@ -9,17 +9,21 @@
 import Foundation
 import IdentityLookup
 
-public class FilterRulePackage: NSObject {
+public class FilterRulePackage: NSObject, Codable {
     
-    private var whiteFilterRuleGroup = Array<FilterRuleGroup>()
-    private var blackFilterRuleGroup = Array<FilterRuleGroup>()
+    public var whiteFilterRuleGroup = Array<FilterRuleGroup>()
+    public var blackFilterRuleGroup = Array<FilterRuleGroup>()
     
     /// 单例
     public static var sharedInstance: FilterRulePackage {
         let userDefaults = UserDefaults(suiteName: MessageFilterAppGroupName)
-        let ruleString = userDefaults?.object(forKey: MessageFilterExtensionRuleKey)
-        let instance = FilterRulePackage.yy_model(withJSON: ruleString ?? "")
-        return (instance == nil) ? FilterRulePackage() : instance!
+        let ruleString = userDefaults?.object(forKey: MessageFilterExtensionRuleKey) as! String
+        let instance = try! JSONDecoder().decode(FilterRulePackage.self, from: ruleString.data(using: .utf8)!)
+        return (instance == nil) ? FilterRulePackage() : instance
+    }
+    
+    private override init(){
+        
     }
     
     /// 判断是不是垃圾信息
@@ -48,10 +52,13 @@ public class FilterRulePackage: NSObject {
     ///
     /// - Returns: 是否保存成功。返回否是因为没有可保存数据
     public func saveToUserDefault() -> Bool {
-        let ruleString = self.yy_modelToJSONString()
+        // 序列化
+        let data = try! JSONEncoder().encode(self)
+        let ruleString = String(data: data, encoding: .utf8) ?? nil
         if (ruleString == nil) {
             return false
         }
+        // 保存到 UserDefaults
         let userDefaults = UserDefaults(suiteName: MessageFilterAppGroupName)
         userDefaults?.set(ruleString, forKey: MessageFilterExtensionRuleKey)
         return true

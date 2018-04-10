@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Message_Filter_Framework
 import Font_Awesome_Swift
 import RAMPaperSwitch
 
@@ -43,9 +44,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        table_filterRuleGroup.reloadData()
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return FilterRulePackage.sharedInstance.blackFilterRuleGroup.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

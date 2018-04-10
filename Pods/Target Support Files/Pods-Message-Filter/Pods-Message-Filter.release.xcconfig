@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ChameleonFramework" "${PODS_CONFIGURATION_BUILD_DIR}/Font-Awesome-Swift" "${PODS_CONFIGURATION_BUILD_DIR}/RAMPaperSwitch" "${PODS_CONFIGURATION_BUILD_DIR}/SwipeCellKit" "${PODS_CONFIGURATION_BUILD_DIR}/YYModel"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ChameleonFramework" "${PODS_CONFIGURATION_BUILD_DIR}/Font-Awesome-Swift" "${PODS_CONFIGURATION_BUILD_DIR}/RAMPaperSwitch" "${PODS_CONFIGURATION_BUILD_DIR}/SwipeCellKit"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/ChameleonFramework/ChameleonFramework.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Font-Awesome-Swift/Font_Awesome_Swift.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RAMPaperSwitch/RAMPaperSwitch.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SwipeCellKit/SwipeCellKit.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/YYModel/YYModel.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "ChameleonFramework" -framework "Font_Awesome_Swift" -framework "RAMPaperSwitch" -framework "SwipeCellKit" -framework "YYModel"
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/ChameleonFramework/ChameleonFramework.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Font-Awesome-Swift/Font_Awesome_Swift.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RAMPaperSwitch/RAMPaperSwitch.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SwipeCellKit/SwipeCellKit.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "ChameleonFramework" -framework "Font_Awesome_Swift" -framework "RAMPaperSwitch" -framework "SwipeCellKit"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

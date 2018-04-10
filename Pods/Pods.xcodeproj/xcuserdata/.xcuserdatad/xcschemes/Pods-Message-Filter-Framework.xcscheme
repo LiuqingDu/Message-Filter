@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DD6EC3DDE04828B1D618507CBAE0AF38'
+               BlueprintIdentifier = '0B25B2353771FAA4ECC4185C54CBA2C8'
                BlueprintName = 'Pods-Message-Filter-Framework'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-Message-Filter-Framework.framework'>

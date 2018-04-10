@@ -206,12 +206,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="stA-YW-TRM">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Zi5-Vh-qWR">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LVy-F5-33D">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Zi5-Vh-qWR">
                             <connections>
                                 <action selector="addRule:" destination="Mep-Kg-uow" id="USn-jw-qo2"/>
                             </connections>

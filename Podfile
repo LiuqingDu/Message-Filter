@@ -28,6 +28,5 @@ target 'Message-Filter-Framework' do
   use_frameworks!
 
   # Pods for Message-Filter-Extension
-  pod 'YYModel'
 
 end
