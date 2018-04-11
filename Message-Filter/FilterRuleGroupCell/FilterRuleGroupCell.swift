@@ -9,6 +9,7 @@
 import UIKit
 import ChameleonFramework
 import RAMPaperSwitch
+import Message_Filter_Framework
 
 class FilterRuleGroupCell: UITableViewCell {
 
@@ -17,6 +18,12 @@ class FilterRuleGroupCell: UITableViewCell {
     @IBOutlet weak var label_rule: UILabel!
     @IBOutlet weak var label_ruleTarget: UILabel!
     @IBOutlet weak var label_ruleType: UILabel!
+    
+    public func setFilterRule(_ filterRule: FilterRule){
+        label_rule.text = filterRule.keyword
+        label_ruleTarget.text = String(filterRule.ruleTarget.rawValue)
+        label_ruleType.text = String(filterRule.ruleType.rawValue)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,7 +38,7 @@ class FilterRuleGroupCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    public func setIcon(icon: UIImage) {
+    public func setIcon(_ icon: UIImage) {
         image_icon.image = icon
     }
     

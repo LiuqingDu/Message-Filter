@@ -55,13 +55,9 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
             return .allow
         }
         // 转换成过滤条件对象
-        var rule: FilterRulePackage?
-        // 如果没有转换出对象则放行
-        if (rule == nil) {
-            return .allow
-        }
+        let rulePackage = FilterRulePackage.sharedInstance
         // 根据过滤条件包判断，如果匹配则过滤
-        if (rule!.isUnwantedMessageBy(ILMessageFilterQueryRequest: queryRequest)) {
+        if (rulePackage.isUnwantedMessageBy(ILMessageFilterQueryRequest: queryRequest)) {
             return .filter
         }
         // 没有匹配上则放行

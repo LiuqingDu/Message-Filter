@@ -61,7 +61,7 @@
         <scene sceneID="dQq-f0-okb">
             <objects>
                 <tableViewController id="Mep-Kg-uow" customClass="AddRuleViewController" customModule="Message_Filter" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HR5-rh-x7T">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HR5-rh-x7T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -206,6 +206,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="stA-YW-TRM">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NE9-mb-Ivq"/>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Zi5-Vh-qWR">
                             <connections>
                                 <action selector="addRule:" destination="Mep-Kg-uow" id="USn-jw-qo2"/>

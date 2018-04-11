@@ -56,7 +56,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table_filterRuleGroup.dequeueReusableCell(withIdentifier: FilterRuleGroupCellIdentity) as! FilterRuleGroupCell
         //cell.delegate = self
-        cell.setIcon(icon: UIImage(icon: FAType.FAGithub, size: CGSize(width: 60, height: 60)))
+        cell.setIcon(UIImage(icon: FAType.FAGithub, size: CGSize(width: 60, height: 60)))
+        cell.setFilterRule(FilterRulePackage.sharedInstance.blackFilterRuleGroup[indexPath.item].rules[0])
         return cell
     }
     
