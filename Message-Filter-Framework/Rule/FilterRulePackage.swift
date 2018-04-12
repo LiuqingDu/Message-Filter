@@ -17,8 +17,11 @@ public class FilterRulePackage: NSObject, Codable {
     /// 单例
     public static var sharedInstance: FilterRulePackage {
         let userDefaults = UserDefaults(suiteName: MessageFilterAppGroupName)
-        let ruleString = userDefaults?.object(forKey: MessageFilterExtensionRuleKey) as? String ?? ""
-        let instance = try! JSONDecoder().decode(FilterRulePackage.self, from: ruleString.data(using: .utf8)!)
+        let ruleString = userDefaults?.object(forKey: MessageFilterExtensionRuleKey) as? String
+        if ruleString == nil {
+            return FilterRulePackage()
+        }
+        let instance = try! JSONDecoder().decode(FilterRulePackage.self, from: ruleString!.data(using: .utf8)!)
         return instance
     }
     
