@@ -27,6 +27,14 @@ public enum FilterRuleType: Int, Codable {
     case FilterRuleTypePrefix = 0, FilterRuleTypeSuffix, FilterRuleTypeContains, FilterRuleTypeNotContains, FilterRuleTypeRegex
 }
 
+/// 过滤规则的执行方式
+///
+/// - FilterRuleActionBlock: 过滤
+/// - FilterRuleActionAllow: 放行
+public enum FilterRuleAction: Int, Codable {
+    case FilterRuleActionBlock = 0, FilterRuleActionAllow
+}
+
 /// 过滤规则
 public class FilterRule: NSObject, Codable {
     

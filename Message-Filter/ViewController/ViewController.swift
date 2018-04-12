@@ -50,14 +50,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return FilterRulePackage.sharedInstance.blackFilterRuleGroup.count
+        return FilterRulePackage.sharedInstance.blackFilterRuleGroup.count + FilterRulePackage.sharedInstance.whiteFilterRuleGroup.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table_filterRuleGroup.dequeueReusableCell(withIdentifier: FilterRuleGroupCellIdentity) as! FilterRuleGroupCell
-        //cell.delegate = self
-        cell.setIcon(UIImage(icon: FAType.FAGithub, size: CGSize(width: 60, height: 60)))
-        cell.setFilterRule(FilterRulePackage.sharedInstance.blackFilterRuleGroup[indexPath.item].rules[0])
+        // 先加载 whiteFilterRuleList
+        if (indexPath.row < FilterRulePackage.sharedInstance.whiteFilterRuleGroup.count) {
+            cell.setIcon(UIImage(icon: FAType.FACheck, size: CGSize(width: 60, height: 60)))
+            cell.setFilterRule(FilterRulePackage.sharedInstance.whiteFilterRuleGroup[indexPath.row].rules[0])
+        } else {
+            let n = FilterRulePackage.sharedInstance.whiteFilterRuleGroup.count
+            cell.setIcon(UIImage(icon: FAType.FATimes, size: CGSize(width: 60, height: 60)))
+            cell.setFilterRule(FilterRulePackage.sharedInstance.blackFilterRuleGroup[indexPath.row - n].rules[0])
+        }
         return cell
     }
     
