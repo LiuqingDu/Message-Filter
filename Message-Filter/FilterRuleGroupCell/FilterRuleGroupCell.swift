@@ -21,8 +21,8 @@ class FilterRuleGroupCell: UITableViewCell {
     
     public func setFilterRule(_ filterRule: FilterRule){
         label_rule.text = filterRule.keyword
-        label_ruleTarget.text = String(filterRule.ruleTarget.rawValue)
-        label_ruleType.text = String(filterRule.ruleType.rawValue)
+        label_ruleTarget.text = filterRule.ruleTarget.rawValue
+        label_ruleType.text = filterRule.ruleType.rawValue
     }
     
     override func awakeFromNib() {

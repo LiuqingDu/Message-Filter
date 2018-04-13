@@ -64,7 +64,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.setIcon(UIImage(icon: FAType.FATimes, size: CGSize(width: 60, height: 60)))
             cell.setFilterRule(FilterRulePackage.sharedInstance.blackFilterRuleGroup[indexPath.row - n].rules[0])
         }
+        cell.selectionStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("lalaala")
+        let alert = UIAlertController(title: "编辑过滤条件", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(image: UIImage(icon: .FATrash, size: CGSize(width: 24, height: 24)), title: "删除", color: UIColor.flatRed(), style: .default, isEnabled: true) { (_) in
+            let rulePackage = FilterRulePackage.sharedInstance
+            let whiteSum = rulePackage.whiteFilterRuleGroup.count
+            // 如果小于 whiteSum 则是白名单
+            if indexPath.row < whiteSum {
+                 rulePackage.whiteFilterRuleGroup.remove(at: indexPath.row)
+            } else {
+                rulePackage.blackFilterRuleGroup.remove(at: indexPath.row - whiteSum)
+            }
+            rulePackage.saveToUserDefault()
+            self.table_filterRuleGroup.reloadData()
+        }
+        self.present(alert, animated: true, completion: nil)
     }
     
 //    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {

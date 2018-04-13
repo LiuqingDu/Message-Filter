@@ -40,7 +40,7 @@ class AddRuleViewController: UITableViewController {
         switch indexPath.row {
             // 选择检测对象
         case 2:
-            let alert = UIAlertController(title: "选择检测对象", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+            let alert = UIAlertController(title: "选择检测对象", message: nil, preferredStyle: .actionSheet)
             alert.addAction(image: UIImage(icon: .FAPhone, size: CGSize(width: 24, height: 24)), title: "发送者", color: nil, style: .default, isEnabled: true) { (_) in
                 self.ruleTarget = .FilterRuleTargetSender
                 tableView.cellForRow(at: indexPath)?.detailTextLabel?.text = "发送者"
@@ -51,7 +51,7 @@ class AddRuleViewController: UITableViewController {
             }
             self.present(alert, animated: true, completion: nil)
         case 3:
-            let alert = UIAlertController(title: "选择检测规则", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+            let alert = UIAlertController(title: "选择检测规则", message: nil, preferredStyle: .actionSheet)
             alert.addAction(image: UIImage(icon: .FAAlignLeft, size: CGSize(width: 24, height: 24)), title: "前缀包含", color: nil, style: .default, isEnabled: true) { (_) in
                 self.ruleType = .FilterRuleTypePrefix
                 tableView.cellForRow(at: indexPath)?.detailTextLabel?.text = "前缀包含"
@@ -74,7 +74,7 @@ class AddRuleViewController: UITableViewController {
             }
             self.present(alert, animated: true, completion: nil)
         case 4:
-            let alert = UIAlertController(title: "选择过滤方式", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+            let alert = UIAlertController(title: "选择过滤方式", message: nil, preferredStyle: .actionSheet)
             alert.addAction(image: UIImage(icon: .FACheck, size: CGSize(width: 24, height: 24)), title: "放行", color: nil, style: .default, isEnabled: true) { (_) in
                 self.ruleAction = .FilterRuleActionAllow
                 tableView.cellForRow(at: indexPath)?.detailTextLabel?.text = "放行"

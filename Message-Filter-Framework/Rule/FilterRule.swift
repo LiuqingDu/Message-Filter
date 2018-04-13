@@ -12,8 +12,9 @@ import Foundation
 ///
 /// - FilterRuleTargetSender: 发送者
 /// - FilterRuleTargetContent: 消息内容
-public enum FilterRuleTarget: Int, Codable {
-    case FilterRuleTargetSender = 0, FilterRuleTargetContent
+public enum FilterRuleTarget: String, Codable {
+    case FilterRuleTargetSender = "FilterRuleTargetSender"
+    case FilterRuleTargetContent = "FilterRuleTargetContent"
 }
 
 /// 过滤规则的类型
@@ -23,16 +24,21 @@ public enum FilterRuleTarget: Int, Codable {
 /// - FilterRuleTypeContains: 包含
 /// - FilterRuleTypeNotContains: 不包含
 /// - FilterRuleTypeRegex: 正则表达式
-public enum FilterRuleType: Int, Codable {
-    case FilterRuleTypePrefix = 0, FilterRuleTypeSuffix, FilterRuleTypeContains, FilterRuleTypeNotContains, FilterRuleTypeRegex
+public enum FilterRuleType: String, Codable {
+    case FilterRuleTypePrefix = "FilterRuleTypePrefix"
+    case FilterRuleTypeSuffix = "FilterRuleTypeSuffix"
+    case FilterRuleTypeContains = "FilterRuleTypeContains"
+    case FilterRuleTypeNotContains = "FilterRuleTypeNotContains"
+    case FilterRuleTypeRegex = "FilterRuleTypeRegex"
 }
 
 /// 过滤规则的执行方式
 ///
 /// - FilterRuleActionBlock: 过滤
 /// - FilterRuleActionAllow: 放行
-public enum FilterRuleAction: Int, Codable {
-    case FilterRuleActionBlock = 0, FilterRuleActionAllow
+public enum FilterRuleAction: String, Codable {
+    case FilterRuleActionBlock = "FilterRuleActionBlock"
+    case FilterRuleActionAllow = "FilterRuleActionAllow"
 }
 
 /// 过滤规则
