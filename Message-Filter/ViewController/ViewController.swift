@@ -69,9 +69,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("lalaala")
         let alert = UIAlertController(title: "编辑过滤条件", message: nil, preferredStyle: .actionSheet)
-        alert.addAction(image: UIImage(icon: .FATrash, size: CGSize(width: 24, height: 24)), title: "删除", color: UIColor.flatRed(), style: .default, isEnabled: true) { (_) in
+        alert.addAction(image: UIImage(icon: .FATrash, size: CGSize(width: 24, height: 24)), title: "删除", color: UIColor.flatRed(), style: .destructive, isEnabled: true) { (_) in
             let rulePackage = FilterRulePackage.sharedInstance
             let whiteSum = rulePackage.whiteFilterRuleGroup.count
             // 如果小于 whiteSum 则是白名单
@@ -82,6 +81,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             rulePackage.saveToUserDefault()
             self.table_filterRuleGroup.reloadData()
+        }
+        alert.addAction(image: UIImage(icon: .FATimes, size: CGSize(width: 24, height: 24)), title: "取消", color: UIColor.flatGray(), style: .default, isEnabled: true) { (_) in
+            self.dismiss(animated: true, completion: nil)
         }
         self.present(alert, animated: true, completion: nil)
     }

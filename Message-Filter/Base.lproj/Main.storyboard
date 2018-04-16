@@ -206,7 +206,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="stA-YW-TRM">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NE9-mb-Ivq"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NE9-mb-Ivq">
+                            <connections>
+                                <action selector="cancel:" destination="Mep-Kg-uow" id="rfR-eJ-S0a"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Zi5-Vh-qWR">
                             <connections>
                                 <action selector="addRule:" destination="Mep-Kg-uow" id="USn-jw-qo2"/>

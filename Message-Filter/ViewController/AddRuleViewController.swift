@@ -35,6 +35,10 @@ class AddRuleViewController: UITableViewController {
         print(rulePackage.saveToUserDefault())
         self.dismiss(animated: true, completion: nil)
     }
+
+    @IBAction func cancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
