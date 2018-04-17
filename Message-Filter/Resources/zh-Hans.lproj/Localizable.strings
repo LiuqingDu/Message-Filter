@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  Message-Filter
+
+  Created by Liuqing Du on 2018/4/17.
+  Copyright © 2018年 JuneDesign. All rights reserved.
+*/
+
+"Edit_Filter_Rule" = "编辑过滤条件";
+"Delete" = "删除";
+"Cancel" = "取消";
+
+"FilterRuleTargetSender" = "检查信息发送者";
+"FilterRuleTargetContent" = "检查信息正文";
+
+"FilterRuleTypePrefix" = "前缀包含";
+"FilterRuleTypeSuffix" = "后缀包含";
+"FilterRuleTypeContains" = "包含";
+"FilterRuleTypeNotContains" = "不包含";
+"FilterRuleTypeRegex" = "匹配正则表达式";

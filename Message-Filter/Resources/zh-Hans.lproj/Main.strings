@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "Contains"; ObjectID = "Dro-sw-HTy"; */
+"Dro-sw-HTy.text" = "包含";
+
+/* Class = "UILabel"; text = "Case sensitive"; ObjectID = "MfR-f9-HI3"; */
+"MfR-f9-HI3.text" = "大小写敏感";
+
+/* Class = "UIBarButtonItem"; title = "Add"; ObjectID = "ORU-8K-VV1"; */
+"ORU-8K-VV1.title" = "添加";
+
+/* Class = "UITextView"; text = "Verify code"; ObjectID = "Qsl-np-Zlf"; */
+"Qsl-np-Zlf.text" = "验证码";
+
+/* Class = "UILabel"; text = "Enabled"; ObjectID = "RJp-ed-24y"; */
+"RJp-ed-24y.text" = "启用";
+
+/* Class = "UILabel"; text = "Filter"; ObjectID = "UUA-gl-NYD"; */
+"UUA-gl-NYD.text" = "过滤";
+
+/* Class = "UILabel"; text = "Message Body"; ObjectID = "Wyu-Rj-OyS"; */
+"Wyu-Rj-OyS.text" = "信息正文";
+
+/* Class = "UILabel"; text = "Action"; ObjectID = "chR-t5-STK"; */
+"chR-t5-STK.text" = "操作";
+
+/* Class = "UIBarButtonItem"; title = "Set"; ObjectID = "qMD-3H-fhM"; */
+"qMD-3H-fhM.title" = "设置";
+
+/* Class = "UILabel"; text = "Rule"; ObjectID = "uCJ-Bw-Wzx"; */
+"uCJ-Bw-Wzx.text" = "匹配方式";
+
+/* Class = "UILabel"; text = "Apply Target"; ObjectID = "zUS-GB-gPE"; */
+"zUS-GB-gPE.text" = "检查对象";

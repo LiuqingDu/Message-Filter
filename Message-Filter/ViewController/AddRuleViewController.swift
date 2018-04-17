@@ -45,48 +45,63 @@ class AddRuleViewController: UITableViewController {
             // 选择检测对象
         case 2:
             let alert = UIAlertController(title: "选择检测对象", message: nil, preferredStyle: .actionSheet)
+            // 检查发送者按钮
             alert.addAction(image: UIImage(icon: .FAPhone, size: CGSize(width: 24, height: 24)), title: "发送者", color: nil, style: .default, isEnabled: true) { (_) in
                 self.ruleTarget = .FilterRuleTargetSender
                 tableView.cellForRow(at: indexPath)?.detailTextLabel?.text = "发送者"
             }
+            // 检查信息内容按钮
             alert.addAction(image: UIImage(icon: .FACommentO, size: CGSize(width: 24, height: 24)), title: "信息内容", color: nil, style: .default, isEnabled: true) { (_) in
                 self.ruleTarget = .FilterRuleTargetContent
                 tableView.cellForRow(at: indexPath)?.detailTextLabel?.text = "信息内容"
             }
+            // 取消按钮
+            alert.addAction(image: UIImage(icon: .FATimes, size: CGSize(width: 24, height: 24)), title: NSLocalizedString("Cancel", comment: "取消"), color: UIColor.flatGray(), style: .default, isEnabled: true, handler: nil)
             self.present(alert, animated: true, completion: nil)
         case 3:
             let alert = UIAlertController(title: "选择检测规则", message: nil, preferredStyle: .actionSheet)
+            // 前缀包含
             alert.addAction(image: UIImage(icon: .FAAlignLeft, size: CGSize(width: 24, height: 24)), title: "前缀包含", color: nil, style: .default, isEnabled: true) { (_) in
                 self.ruleType = .FilterRuleTypePrefix
                 tableView.cellForRow(at: indexPath)?.detailTextLabel?.text = "前缀包含"
             }
+            // 后缀包含
             alert.addAction(image: UIImage(icon: .FAAlignRight, size: CGSize(width: 24, height: 24)), title: "后缀包含", color: nil, style: .default, isEnabled: true) { (_) in
                 self.ruleType = .FilterRuleTypeSuffix
                 tableView.cellForRow(at: indexPath)?.detailTextLabel?.text = "后缀包含"
             }
+            // 包含
             alert.addAction(image: UIImage(icon: .FAAlignJustify, size: CGSize(width: 24, height: 24)), title: "包含", color: nil, style: .default, isEnabled: true) { (_) in
                 self.ruleType = .FilterRuleTypeContains
                 tableView.cellForRow(at: indexPath)?.detailTextLabel?.text = "包含"
             }
+            // 不包含
             alert.addAction(image: UIImage(icon: .FAAlignCenter, size: CGSize(width: 24, height: 24)), title: "不包含", color: nil, style: .default, isEnabled: true) { (_) in
                 self.ruleType = .FilterRuleTypeNotContains
                 tableView.cellForRow(at: indexPath)?.detailTextLabel?.text = "不包含"
             }
+            // 正则表达式
             alert.addAction(image: UIImage(icon: .FAFont, size: CGSize(width: 24, height: 24)), title: " 正则表达式", color: nil, style: .default, isEnabled: true) { (_) in
                 self.ruleType = .FilterRuleTypeRegex
                 tableView.cellForRow(at: indexPath)?.detailTextLabel?.text = "正则表达式"
             }
+            // 取消按钮
+            alert.addAction(image: UIImage(icon: .FATimes, size: CGSize(width: 24, height: 24)), title: NSLocalizedString("Cancel", comment: "取消"), color: UIColor.flatGray(), style: .default, isEnabled: true, handler: nil)
             self.present(alert, animated: true, completion: nil)
         case 4:
             let alert = UIAlertController(title: "选择过滤方式", message: nil, preferredStyle: .actionSheet)
+            // 放行
             alert.addAction(image: UIImage(icon: .FACheck, size: CGSize(width: 24, height: 24)), title: "放行", color: nil, style: .default, isEnabled: true) { (_) in
                 self.ruleAction = .FilterRuleActionAllow
                 tableView.cellForRow(at: indexPath)?.detailTextLabel?.text = "放行"
             }
+            // 过滤
             alert.addAction(image: UIImage(icon: .FATimes, size: CGSize(width: 24, height: 24)), title: " 过滤", color: nil, style: .default, isEnabled: true) { (_) in
                 self.ruleAction = .FilterRuleActionBlock
                 tableView.cellForRow(at: indexPath)?.detailTextLabel?.text = "过滤"
             }
+            // 取消按钮
+            alert.addAction(image: UIImage(icon: .FATimes, size: CGSize(width: 24, height: 24)), title: NSLocalizedString("Cancel", comment: "取消"), color: UIColor.flatGray(), style: .default, isEnabled: true)
             self.present(alert, animated: true, completion: nil)
         default:
             return

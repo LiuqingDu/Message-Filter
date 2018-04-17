@@ -60,6 +60,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.setIcon(UIImage(icon: FAType.FACheck, size: CGSize(width: 60, height: 60)))
             cell.setFilterRule(FilterRulePackage.sharedInstance.whiteFilterRuleGroup[indexPath.row].rules[0])
         } else {
+        // 再加载 blackFilterRuleList
             let n = FilterRulePackage.sharedInstance.whiteFilterRuleGroup.count
             cell.setIcon(UIImage(icon: FAType.FATimes, size: CGSize(width: 60, height: 60)))
             cell.setFilterRule(FilterRulePackage.sharedInstance.blackFilterRuleGroup[indexPath.row - n].rules[0])
@@ -69,8 +70,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alert = UIAlertController(title: "编辑过滤条件", message: nil, preferredStyle: .actionSheet)
-        alert.addAction(image: UIImage(icon: .FATrash, size: CGSize(width: 24, height: 24)), title: "删除", color: UIColor.flatRed(), style: .destructive, isEnabled: true) { (_) in
+        let alert = UIAlertController(title: NSLocalizedString("Edit_Filter_Rule", comment: "编辑过滤规则"), message: nil, preferredStyle: .actionSheet)
+        // 删除按钮
+        alert.addAction(image: UIImage(icon: .FATrash, size: CGSize(width: 24, height: 24)), title:  NSLocalizedString("Delete", comment: "删除"), color: UIColor.flatRed(), style: .destructive, isEnabled: true) { (_) in
             let rulePackage = FilterRulePackage.sharedInstance
             let whiteSum = rulePackage.whiteFilterRuleGroup.count
             // 如果小于 whiteSum 则是白名单
@@ -82,9 +84,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             rulePackage.saveToUserDefault()
             self.table_filterRuleGroup.reloadData()
         }
-        alert.addAction(image: UIImage(icon: .FATimes, size: CGSize(width: 24, height: 24)), title: "取消", color: UIColor.flatGray(), style: .default, isEnabled: true) { (_) in
-            self.dismiss(animated: true, completion: nil)
-        }
+        // 取消按钮
+        alert.addAction(image: UIImage(icon: .FATimes, size: CGSize(width: 24, height: 24)), title: NSLocalizedString("Cancel", comment: "取消"), color: UIColor.flatGray(), style: .default, isEnabled: true, handler: nil)
         self.present(alert, animated: true, completion: nil)
     }
     
