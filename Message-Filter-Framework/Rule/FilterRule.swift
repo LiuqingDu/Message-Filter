@@ -47,6 +47,7 @@ public class FilterRule: NSObject, Codable {
     public var ruleTarget: FilterRuleTarget = .FilterRuleTargetContent
     public var ruleType  : FilterRuleType = .FilterRuleTypeContains
     public var keyword   : String = ""
+    public var enabled   : Bool = true
     
     public init(withRuleTarget _ruleTarget: FilterRuleTarget, ruleType _ruleType: FilterRuleType, keyword _keyword: String){
         self.ruleType = _ruleType
@@ -59,6 +60,10 @@ public class FilterRule: NSObject, Codable {
     /// - Parameter request: 待检查的 QueryRequest
     /// - Returns: 是否符合条件。匹配上返回trle，没匹配上返回false。
     public func isMachedForRequest(request: QueryRequest) -> Bool {
+        // 如果未启用则返回没有匹配上
+        if (!enabled) {
+            return false
+        }
         // 检测的对象。可以是：1，发送人；2，发送内容
         // 根据过滤条件设置的检测对象来获取相应的待检测内容
         var target: String

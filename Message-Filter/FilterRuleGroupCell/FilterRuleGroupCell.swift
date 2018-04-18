@@ -25,6 +25,10 @@ class FilterRuleGroupCell: UITableViewCell {
         label_ruleType.text = NSLocalizedString(filterRule.ruleType.rawValue, comment: "")
     }
     
+    @IBAction func enableRule(_ sender: Any) {
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

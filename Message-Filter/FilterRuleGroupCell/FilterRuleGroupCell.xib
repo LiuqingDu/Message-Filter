@@ -49,6 +49,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4w1-g4-aUJ" customClass="RAMPaperSwitch" customModule="RAMPaperSwitch">
                                 <rect key="frame" x="276" y="23" width="51" height="31"/>
+                                <connections>
+                                    <action selector="enableRule:" destination="KGk-i7-Jjw" eventType="valueChanged" id="UdB-e1-d8P"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="检测目标：发件人和信息内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hk4-Si-gfs">
                                 <rect key="frame" x="20" y="170" width="305" height="21"/>
