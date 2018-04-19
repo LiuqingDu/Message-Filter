@@ -8,4 +8,4 @@
 
 import Foundation
 
-public let FilterRuleGroupCellIdentity = "FilterRuleGroupCell"
+//public let FilterRuleGroupCellIdentity = "FilterRuleGroupCell"

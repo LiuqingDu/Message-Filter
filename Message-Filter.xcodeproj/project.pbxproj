@@ -22,6 +22,7 @@
 		E578DA562068A26B00669A92 /* MessageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E578DA552068A26B00669A92 /* MessageFilterExtension.swift */; };
 		E578DA5A2068A26B00669A92 /* Message-Filter-Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E578DA532068A26B00669A92 /* Message-Filter-Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E582DFE72085F61600C5D799 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E582DFE92085F61600C5D799 /* Localizable.strings */; };
+		E588816420888C790050C88C /* FilterRuleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5888161208882E10050C88C /* FilterRuleModel.xcdatamodeld */; };
 		E5CFEB40207F52980075DBE2 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CFEAF1207F52970075DBE2 /* Array+Extensions.swift */; };
 		E5CFEB41207F52980075DBE2 /* Common+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CFEAF2207F52970075DBE2 /* Common+Extensions.swift */; };
 		E5CFEB42207F52980075DBE2 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CFEAF3207F52970075DBE2 /* Date+Extension.swift */; };
@@ -160,6 +161,7 @@
 		E582DFF32085F69C00C5D799 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E582DFF62085F73F00C5D799 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		E582DFF82085F74D00C5D799 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		E5888162208882E10050C88C /* FilterRuleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FilterRuleModel.xcdatamodel; sourceTree = "<group>"; };
 		E5CFEAF1207F52970075DBE2 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		E5CFEAF2207F52970075DBE2 /* Common+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Common+Extensions.swift"; sourceTree = "<group>"; };
 		E5CFEAF3207F52970075DBE2 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -677,6 +679,7 @@
 			children = (
 				E5EC50EA2073719A00E223F5 /* Rule */,
 				E5EC50F72074BFEC00E223F5 /* Utils */,
+				E5888161208882E10050C88C /* FilterRuleModel.xcdatamodeld */,
 				E5EC513920764D2400E223F5 /* Info.plist */,
 				E5EC514C20765AAD00E223F5 /* Message-Filter-Framework-Header.h */,
 			);
@@ -1050,6 +1053,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E588816420888C790050C88C /* FilterRuleModel.xcdatamodeld in Sources */,
 				E5EC51492076583400E223F5 /* QueryRequest.swift in Sources */,
 				E5EC51442076582100E223F5 /* GlobalStatics.swift in Sources */,
 				E5EC51452076582400E223F5 /* Extensions.swift in Sources */,
@@ -1405,6 +1409,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E5888161208882E10050C88C /* FilterRuleModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E5888162208882E10050C88C /* FilterRuleModel.xcdatamodel */,
+			);
+			currentVersion = E5888162208882E10050C88C /* FilterRuleModel.xcdatamodel */;
+			path = FilterRuleModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E578DA322068A22B00669A92 /* Project object */;
 }
