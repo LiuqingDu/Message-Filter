@@ -8,6 +8,7 @@
 
 import Foundation
 import IdentityLookup
+import CoreData
 
 public class FilterRulePackage: NSObject, Codable {
     
